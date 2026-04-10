@@ -12,7 +12,9 @@ body {
     flex-direction: column;
 
     background-image: url(assets/images/body-bg.jpg);
-    /* background: linear-gradient(90deg, #3CA55C, #B5AC49); */
+    /* background: linear-gradient(45deg, #013f4a, #068582); */
+    /* background: linear-gradient(45deg, #d203dd, #0d1e79); */
+    /* background: linear-gradient(45deg, #1e1e2f, #4c2a59, #9e4b8a); */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -151,13 +153,13 @@ body {
     flex-grow: 1;
 
     color: white;
-    font-family: "Kurale", serif;
+    font-family: "Montserrat", sans-serif;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.2;
 }
 
@@ -236,4 +238,58 @@ body {
     margin-bottom: 10px;
     font-size: 1.5rem;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Contact Section CSS */
+
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.contact h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+
+    background: white;
+    color: black;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
