@@ -11,10 +11,12 @@ body {
     display: flex;
     flex-direction: column;
 
-    background: #333;
+    background-image: url(body-bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* Navbar Section CSS */
 
 .navbar {
     width: 100%;
@@ -26,6 +28,20 @@ body {
 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    animation: FadeIn 1s ease;
+}
+
+@keyframes FadeIn {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+    
 }
 
 .logo {
@@ -78,4 +94,70 @@ body {
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     border-radius: 3px;
     transform: scale(1.05);
+}
+
+/* Hero Section CSS */
+
+.hero-section {
+    margin: 40px auto;
+    padding: 40px 80px;
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }    
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.hero-content {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    
+    flex-grow: 1;
+
+    color: white;
+    font-family: "Kurale", serif;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin-bottom: 10px;
+
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    font-family: "Kurale", serif;
 }
