@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +28,10 @@ body {
 .navbar {
     width: 100%;
     padding: 20px 40px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
     display: flex;
     align-items: center;
@@ -118,11 +126,12 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 
     animation: fadeIn 1s ease;
+    transition: 0.3s ease;
 }
 
 .hero-section:hover {
     transform: translateY(-5px);
-    transition: 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadeIn {
@@ -175,6 +184,7 @@ body {
 /* Projects Section CSS */
 
 .projects {
+    margin-top: 40px;
     margin-bottom: 60px;
     padding: 60px 20px;
     text-align: center;
@@ -205,6 +215,7 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -222,6 +233,8 @@ body {
 .project-card button {
     margin-top: 10px;
     padding: 10px 20px;
+    background: white;
+    color: black;
     border: none;
     border-radius: 10px;
     font-weight: bold;
@@ -230,7 +243,7 @@ body {
 }
 
 .project-card button:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
