@@ -15,10 +15,12 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-image: url(assets/images/body-bg.jpg);
+    /* background-image: url(assets/images/body-bg.jpg); */
     /* background: linear-gradient(45deg, #013f4a, #068582); */
     /* background: linear-gradient(45deg, #d203dd, #0d1e79); */
     /* background: linear-gradient(45deg, #1e1e2f, #4c2a59, #9e4b8a); */
+    /* background: linear-gradient(135deg, #470000, #750000,  #470000); */
+    background: linear-gradient(135deg, #470047, #A300A3,  #470047);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -305,4 +307,57 @@ body {
 .contact-form button:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Footer Section CSS */
+
+.footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    font-size: 1rem;
+    color: white;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 0 30px rgba(0,0,0,0.3);
+}
+
+.footer p {
+    text-align: right;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.profiles a {
+    padding: 0 10px 0 0;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.profiles a::after {
+    content: "";
+
+    height: 2px;
+    width: 0;
+
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    
+    background: white;
+    transition: 0.3s ease;
+}
+
+.profiles a:hover::after {
+    width: 100%;
 }
