@@ -2,61 +2,91 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arjun's Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
     <!-- Navbar Section ⏬ -->
     <nav class="navbar">
-
         <h2 class="logo">ARJUN TELANGE</h2>
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
 
+        <ul class="menu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
     <!-- Hero Section ⏬ -->
-    <section class="hero-section">
+    <section class="hero-section" id="header">
+        <img src="assets/images/hero.png" alt="My Image">
 
-        <img src="assets/images/hero-img.jpg" alt="My Image">
         <div class="hero-content">
-            <p>About Me</p>
+            <!-- <p>About Me</p> -->
             <h1>I'm Arjun,</h1>
             <h1>a Frontend Developer in Progress.</h1>
         </div>
+    </section>
 
+    <!-- About Me Section ⏬ -->
+    <section class="about-me">
+        <div class="about">
+
+            <div class="about-img">
+                <img src="assets/images/about.png" alt="About Me Logo Image">
+            </div>
+
+            <div class="about-info">
+                <h2>About Me</h2>
+
+                <p>Hi, I’m Arjun 👋</p>
+
+                <p>
+                    I am a passionate frontend developer currently learning JavaScript and building real-world projects.
+                </p>
+
+                <p>
+                    I enjoy creating clean, modern, and user-friendly web interfaces.
+                    Right now, I am focusing on strengthening my core skills in HTML, CSS, and JavaScript.
+                </p>
+
+                <p>
+                    My goal is to become a skilled developer and work on impactful real-world applications.
+                </p>
+            </div>
+
+        </div>
     </section>
 
     <!-- Main Section ⏬ -->
-    <section class="projects">
-
+    <section class="projects" id="projects">
         <h2>My Projects</h2>
 
         <div class="project-container">
 
             <div class="project-card">
                 <img src="assets/images/project1.png" alt="My Project">
+
                 <h3>Glass UI Landing Page</h3>
                 <p>Modern glassmorphism UI design using HTML & CSS</p>
+
                 <div class="project-links">
                     <a href="#" target="_blank">
                         <button>View Project</button>
                     </a>
+
                     <a href="#" target="_blank">
                         <button>View Code</button>
                     </a>
@@ -65,12 +95,15 @@
 
             <div class="project-card">
                 <img src="assets/images/project2.png" alt="My Project">
+
                 <h3>Sunrise Animation</h3>
                 <p>CSS animation project with moving sun and sky effects.</p>
+
                 <div class="project-links">
                     <a href="#" target="_blank">
                         <button>View Project</button>
                     </a>
+
                     <a href="#" target="_blank">
                         <button>View Code</button>
                     </a>
@@ -79,12 +112,17 @@
 
             <div class="project-card">
                 <img src="assets/images/project3.png" alt="My Project">
+
                 <h3>Snake Explorer</h3>
-                <p>An interactive and responsive landing page showcasing venomous snake species.</p>
+                <p>
+                    An interactive and responsive landing page showcasing venomous snake species.
+                </p>
+
                 <div class="project-links">
                     <a href="https://arjuntelange.github.io/snake-explorer/" target="_blank">
                         <button>View Project</button>
                     </a>
+
                     <a href="https://github.com/arjuntelange/snake-explorer/blob/main/index.html" target="_blank">
                         <button>View Code</button>
                     </a>
@@ -92,23 +130,26 @@
             </div>
 
         </div>
-
     </section>
 
     <!-- Contact Section ⏬ -->
-    <section class="contact">
-
+    <section class="contact" id="contact">
         <h2>Contact Me</h2>
 
-        <form class="contact-form">
+        <div class="contact-content">
+            <div class="contact-img">
+                <img src="assets/images/contact.png" alt="Contact Image">
+            </div>
+            <div class="contact-section">
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
 
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-
-            <button type="submit">Send Message</button>
-
-        </form>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- Footer Section ⏬ -->
@@ -143,6 +184,7 @@
                 </svg>
                 <a href="https://www.instagram.com/arju_na_21/?hl=en">Instagram</a>
             </div>
+
         </div>
     </footer>
 

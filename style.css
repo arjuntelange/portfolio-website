@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scroll-margin-top: 100px;
 }
 
 * {
@@ -102,12 +103,12 @@ body {
 
 .hero-section {
     margin: 60px auto;
-    padding: 40px 80px;
+    padding: 40px;
     width: 100%;
     max-width: 1200px;
 
     display: flex;
-    gap: 100px;
+    /* gap: 100px; */
     align-items: center;
 
     background: rgba(255, 255, 255, 0.05);
@@ -126,10 +127,10 @@ body {
 }
 
 .hero-section img {
-    width: 300px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
 }
 
 .hero-content {
@@ -157,23 +158,87 @@ body {
     animation: revealText 2s ease forwards;
 }
 
-.hero-content p {
+/* .hero-content p {
     margin-bottom: 10px;
 
     font-size: 0.9rem;
     letter-spacing: 1px;
     opacity: 0.7;
     font-family: "Kurale", serif;
+} */
+
+/* About Me Section CSS */
+
+.about-me {
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.about-img img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.about-me h2 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.about-me p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.about-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Projects Section CSS */
 
 .projects {
-    margin-top: 40px;
-    margin-bottom: 60px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
     padding: 60px 20px;
     text-align: center;
     color: white;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .projects h2 {
@@ -258,9 +323,40 @@ body {
 /* Contact Section CSS */
 
 .contact {
-    padding: 60px 20px;
+    margin: 60px auto;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    /* gap: 100px; */
+    align-items: center;
     text-align: center;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     color: white;
+}
+
+.contact-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-section {
+    flex-grow: 1;
+    align-content: center;
+    justify-content: center;
+}
+
+.contact-img img {
+    width: 100%;
+    max-width: 500px;
 }
 
 .contact h2 {
