@@ -1,5 +1,8 @@
 html {
     scroll-behavior: smooth;
+}
+
+section {
     scroll-margin-top: 100px;
 }
 
@@ -20,16 +23,22 @@ body {
     /* background: linear-gradient(135deg, #1e1e2f, #4c2a59, #9e4b8a); */
     /* background: linear-gradient(135deg, #470047, #A300A3,  #470047); */
     /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #1c1c3c); */
-    background: linear-gradient(135deg, #3b0a0a, #8b1e3f, #3b0a0a);
+    /* background: linear-gradient(135deg, #3b0a0a, #8b1e3f, #3b0a0a); */
     /* background: linear-gradient(135deg, #2f0808, #8b1e3f, #2f0808); */
+    /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* background: linear-gradient(135deg, #1e1e2f, #2b2b45, #3a3a5c); */
+    /* background: linear-gradient(135deg, #141e30, #243b55, #1f2a40); */
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Navbar Section CSS */
 
 .navbar {
     width: 100%;
+    margin-bottom: 60px;
     padding: 20px 40px;
 
     position: sticky;
@@ -128,7 +137,7 @@ body {
 
 .hero-section img {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     border-radius: 10px;
     /* box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
 }
@@ -192,7 +201,7 @@ body {
 
 .about-img {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
 }
 
 .about-img img{
@@ -216,10 +225,11 @@ body {
     font-family: "Montserrat", sans-serif;
     color: white;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    line-height: 1.6;
 }
 
 .about-info {
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -310,7 +320,7 @@ body {
 
 .project-links  {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -345,18 +355,22 @@ body {
 .contact-content {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
 
 .contact-section {
-    flex-grow: 1;
-    align-content: center;
-    justify-content: center;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .contact-img img {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
 }
 
 .contact h2 {
@@ -365,8 +379,9 @@ body {
 }
 
 .contact-form {
-    max-width: 500px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -381,6 +396,14 @@ body {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     color: white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .contact-form textarea {
@@ -483,6 +506,8 @@ body {
 /* Mobile Responsive Web Design */
 
 @media (max-width: 768px) {
+
+    /* Hero */
     .hero-section{
         width: 90%;
         flex-direction: column;
@@ -492,17 +517,36 @@ body {
     }
 
     .hero-section img {
-        width: 200px;
+        width: 100%;
     }
 
     .hero-content h1 {
         font-size: 2rem;
     }
 
+    /* Navber */
     .menu {
         display: none;
     }
 
+    /* About Me */
+    .about-me {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+    /* Projects */
+    .projects {
+        width: 90%;
+    }
     .project-container {
         flex-direction: column;
         align-items: center;
@@ -512,6 +556,25 @@ body {
         width: 90%;
     }
 
+    /* Contact */
+    .contact {
+        width: 90%;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-section {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    /* Footer */
     .footer {
         flex-direction: column;
         gap: 20px;
