@@ -51,7 +51,7 @@ body {
 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
     animation: fadeIn 1s ease;
 }
@@ -124,7 +124,7 @@ body {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
     animation: fadeIn 1s ease;
     transition: 0.3s ease;
@@ -147,7 +147,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    
+
     flex-grow: 1;
 
     color: white;
@@ -167,14 +167,14 @@ body {
     animation: revealText 2s ease forwards;
 }
 
-/* .hero-content p {
+.hero-content p {
     margin-bottom: 10px;
 
     font-size: 0.9rem;
     letter-spacing: 1px;
     opacity: 0.7;
     font-family: "Kurale", serif;
-} */
+}
 
 /* About Me Section CSS */
 
@@ -184,13 +184,22 @@ body {
     max-width: 1200px;
     margin: 60px auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    
+
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.about-me h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 .about {
@@ -204,12 +213,12 @@ body {
     max-width: 450px;
 }
 
-.about-img img{
+.about-img img {
     width: 100%;
     max-width: 500px;
 }
 
-.about-me h2 {
+.about-info h2 {
     margin-bottom: 20px;
     font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
@@ -234,6 +243,103 @@ body {
     flex-direction: column;
 }
 
+/* Skills Section CSS */
+
+.skill-section {
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.skill-section h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.skills {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Right Side */
+.skill-text {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+}
+
+.skill-text h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.skill-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Left Side */
+.skill-icons {
+    width: 100%;
+    max-width: 450px;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* perfect 2x2 layout */
+    gap: 20px;
+    place-items: center;
+}
+
+/* Skill Card */
+.skill-card {
+    width: 120px;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+
+    text-align: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.skill-card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
 /* Projects Section CSS */
 
 .projects {
@@ -248,12 +354,13 @@ body {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .projects h2 {
     margin-bottom: 40px;
     font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     animation: fadeIn 1s ease;
 }
@@ -270,7 +377,7 @@ body {
     padding: 20px;
 
     background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
 
     border-radius: 10px;
@@ -305,7 +412,7 @@ body {
 
 .project-links button:hover {
     transform: scale(1.08);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h3 {
@@ -318,7 +425,7 @@ body {
     margin-bottom: 10px;
 }
 
-.project-links  {
+.project-links {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -340,7 +447,6 @@ body {
 
     display: flex;
     flex-direction: column;
-    /* gap: 100px; */
     align-items: center;
     text-align: center;
 
@@ -348,13 +454,12 @@ body {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     color: white;
 }
 
 .contact-content {
     width: 100%;
-    display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -376,6 +481,7 @@ body {
 .contact h2 {
     margin-bottom: 40px;
     font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
 }
 
 .contact-form {
@@ -394,7 +500,7 @@ body {
     border: none;
 
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     color: white;
 }
 
@@ -425,7 +531,7 @@ textarea::placeholder {
 
 .contact-form button:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer Section CSS */
@@ -444,7 +550,7 @@ textarea::placeholder {
 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
-    box-shadow: 10px 0 30px rgba(0,0,0,0.3);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
 }
 
 .footer p {
@@ -472,7 +578,7 @@ textarea::placeholder {
     position: absolute;
     bottom: -3px;
     left: 0;
-    
+
     background: white;
     transition: 0.3s ease;
 }
@@ -488,7 +594,7 @@ textarea::placeholder {
     from {
         opacity: 0;
         transform: translateY(20px);
-    }    
+    }
 
     to {
         opacity: 1;
@@ -508,7 +614,7 @@ textarea::placeholder {
 @media (max-width: 768px) {
 
     /* Hero */
-    .hero-section{
+    .hero-section {
         width: 90%;
         flex-direction: column;
         padding: 20px;
@@ -547,6 +653,7 @@ textarea::placeholder {
     .projects {
         width: 90%;
     }
+
     .project-container {
         flex-direction: column;
         align-items: center;
