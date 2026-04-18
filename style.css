@@ -65,7 +65,7 @@ body {
     font-family: "Montserrat", sans-serif;
     word-spacing: 3px;
     letter-spacing: 2px;
-    
+
     color: white;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 
@@ -88,7 +88,7 @@ body {
 
     color: white;
     text-decoration: none;
-    
+
     transition: all 0.3s ease;
 }
 
@@ -101,9 +101,9 @@ body {
     position: absolute;
     left: 0;
     bottom: -3px;
-    
+
     background: white;
-    
+
     transition: 0.3s ease;
 }
 
@@ -116,7 +116,7 @@ body {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     border-radius: 3px;
-    
+
     transform: scale(1.05);
 }
 
@@ -194,7 +194,7 @@ body {
     padding: 40px;
     width: 100%;
     max-width: 1200px;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,6 +205,14 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     color: white;
+
+    transition: 0.3s ease;
+    animation: fadeIn 1s ease;
+}
+
+.about-me:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .about-me h2 {
@@ -278,6 +286,14 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     color: white;
+
+    transition: 0.3s ease;
+    animation: fadeIn 1s ease;
+}
+
+.skill-section:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .skill-section h2 {
@@ -330,7 +346,7 @@ body {
 .skill-icons {
     width: 100%;
     max-width: 450px;
-    
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -342,26 +358,42 @@ body {
     padding: 20px;
     width: 120px;
 
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(20, 30, 60, 0.4);
+    backdrop-filter: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    
+
     text-align: center;
     cursor: pointer;
 
+    position: relative;
+    overflow: hidden;
+
     transition: 0.3s ease;
+}
+
+.skill-card::before {
+    content: "";
+    
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+}
+
+.skill-card:hover::before {
+    opacity: 1;
 }
 
 .skill-card img {
     margin-bottom: 10px;
     width: 50px;
 }
-
+/* 
 .skill-card:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-8px) scale(1.05);
-}
+} */
 
 
 /* Projects Section CSS */
@@ -371,7 +403,7 @@ body {
     padding: 60px 20px;
     width: 100%;
     max-width: 1200px;
-    
+
     text-align: center;
     color: white;
 
@@ -380,6 +412,14 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s ease;
+    animation: fadeIn 1s ease;
+}
+
+.projects:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .projects h2 {
@@ -403,21 +443,33 @@ body {
     padding: 20px;
     width: 320px;
 
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
+    background: rgba(20, 30, 60, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: none;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    
+
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
 
     transition: 0.3s ease;
     animation: fadeIn 1s ease;
 }
 
-.project-card:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-10px);
+.project-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover::before {
+    opacity: 1;
 }
 
 .project-card img {
@@ -438,7 +490,7 @@ body {
     color: black;
 
     cursor: pointer;
-    
+
     transition: 0.3s ease;
 }
 
@@ -490,6 +542,14 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     color: white;
+
+    transition: 0.3s ease;
+    animation: fadeIn 1s ease
+}
+
+.contact:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .contact-content {
