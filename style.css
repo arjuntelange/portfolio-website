@@ -9,6 +9,7 @@ section {
 * {
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
 }
 
@@ -19,20 +20,21 @@ body {
     display: flex;
     flex-direction: column;
 
-    /* background-image: url(assets/images/body-bg.jpg); */
     /* background: linear-gradient(135deg, #1e1e2f, #4c2a59, #9e4b8a); */
     /* background: linear-gradient(135deg, #470047, #A300A3,  #470047); */
     /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #1c1c3c); */
     /* background: linear-gradient(135deg, #3b0a0a, #8b1e3f, #3b0a0a); */
     /* background: linear-gradient(135deg, #2f0808, #8b1e3f, #2f0808); */
     /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
     /* background: linear-gradient(135deg, #1e1e2f, #2b2b45, #3a3a5c); */
     /* background: linear-gradient(135deg, #141e30, #243b55, #1f2a40); */
+
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+
 
 /* Navbar Section CSS */
 
@@ -51,19 +53,22 @@ body {
 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
     animation: fadeIn 1s ease;
 }
 
 .logo {
     padding: 5px 10px;
+
     font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     word-spacing: 3px;
     letter-spacing: 2px;
+    
     color: white;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+
     cursor: pointer;
 }
 
@@ -71,28 +76,34 @@ body {
     display: flex;
     gap: 30px;
 
-    list-style: none;
     color: white;
     font-size: 0.8rem;
     font-family: "Montserrat", sans-serif;
+    list-style: none;
 }
 
 .menu li>a {
-    position: relative;
     padding: 5px 10px;
-    text-decoration: none;
+    position: relative;
+
     color: white;
+    text-decoration: none;
+    
     transition: all 0.3s ease;
 }
 
 .menu li>a::after {
     content: "";
+
+    width: 0%;
+    height: 2px;
+
     position: absolute;
     left: 0;
     bottom: -3px;
-    width: 0%;
-    height: 2px;
+    
     background: white;
+    
     transition: 0.3s ease;
 }
 
@@ -105,8 +116,10 @@ body {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     border-radius: 3px;
+    
     transform: scale(1.05);
 }
+
 
 /* Hero Section CSS */
 
@@ -117,29 +130,27 @@ body {
     max-width: 1200px;
 
     display: flex;
-    /* gap: 100px; */
     align-items: center;
+    gap: 20px;
 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
-    animation: fadeIn 1s ease;
     transition: 0.3s ease;
+    animation: fadeIn 1s ease;
 }
 
 .hero-section:hover {
-    transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .hero-section img {
     width: 100%;
     max-width: 450px;
-    border-radius: 10px;
-    /* box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
 }
 
 .hero-content {
@@ -147,50 +158,61 @@ body {
 
     display: flex;
     flex-direction: column;
-    
     flex-grow: 1;
 
     color: white;
     font-family: "Montserrat", sans-serif;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 
-    display: inline-block;
     overflow: hidden;
+}
+
+.hero-content p {
+    margin-bottom: 10px;
+
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-family: "Kurale", serif;
+
+    opacity: 0.7;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     font-weight: 300;
     line-height: 1.2;
-    display: inline-block;
+
     transform: translateX(100%);
     animation: revealText 2s ease forwards;
 }
 
-/* .hero-content p {
-    margin-bottom: 10px;
-
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    opacity: 0.7;
-    font-family: "Kurale", serif;
-} */
 
 /* About Me Section CSS */
 
 .about-me {
+    margin: 60px auto;
     padding: 40px;
     width: 100%;
     max-width: 1200px;
-    margin: 60px auto;
-    display: flex;
-    align-items: center;
     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.about-me h2 {
+    margin-bottom: 40px;
+
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 .about {
@@ -204,23 +226,32 @@ body {
     max-width: 450px;
 }
 
-.about-img img{
+.about-img img {
     width: 100%;
-    max-width: 500px;
 }
 
-.about-me h2 {
+.about-info {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.about-info h2 {
     margin-bottom: 20px;
+
     font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
     color: white;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
-.about-me p {
+.about-info p {
+    margin-bottom: 20px;
+
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+
     font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
     color: white;
@@ -228,19 +259,119 @@ body {
     line-height: 1.6;
 }
 
-.about-info {
-    padding: 20px;
+
+/* Skills Section CSS */
+
+.skill-section {
+    margin: 60px auto;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
 }
+
+.skill-section h2 {
+    margin-bottom: 40px;
+
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.skills {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Right Side */
+.skill-text {
+    padding: 20px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.skill-text h3 {
+    margin-bottom: 15px;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.skill-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+
+    opacity: 0.9;
+}
+
+/* Left Side */
+.skill-icons {
+    width: 100%;
+    max-width: 450px;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    place-items: center;
+}
+
+/* Skill Card */
+.skill-card {
+    padding: 20px;
+    width: 120px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    
+    text-align: center;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.skill-card img {
+    margin-bottom: 10px;
+    width: 50px;
+}
+
+.skill-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px) scale(1.05);
+}
+
 
 /* Projects Section CSS */
 
 .projects {
-    width: 100%;
-    max-width: 1200px;
     margin: 60px auto;
     padding: 60px 20px;
+    width: 100%;
+    max-width: 1200px;
+    
     text-align: center;
     color: white;
 
@@ -248,13 +379,16 @@ body {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .projects h2 {
     margin-bottom: 40px;
+
     font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+
     animation: fadeIn 1s ease;
 }
 
@@ -266,50 +400,56 @@ body {
 }
 
 .project-card {
-    width: 320px;
     padding: 20px;
+    width: 320px;
 
     background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
-
-    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: 0.3s ease;
+    border-radius: 10px;
+    
     cursor: pointer;
+
+    transition: 0.3s ease;
     animation: fadeIn 1s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
 }
 
 .project-card img {
+    margin-bottom: 10px;
     width: 100%;
+
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    margin-bottom: 10px;
 }
 
 .project-links button {
     margin-top: 10px;
     padding: 10px 20px;
+
     background: white;
-    color: black;
     border: none;
     border-radius: 10px;
+    color: black;
+
     cursor: pointer;
+    
     transition: 0.3s ease;
 }
 
 .project-links button:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transform: scale(1.08);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .project-card h3 {
     margin-bottom: 10px;
+
     font-size: 1.5rem;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
@@ -318,17 +458,18 @@ body {
     margin-bottom: 10px;
 }
 
-.project-links  {
+.project-links {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .project-links a {
     display: inline-block;
 }
+
 
 /* Contact Section CSS */
 
@@ -340,7 +481,6 @@ body {
 
     display: flex;
     flex-direction: column;
-    /* gap: 100px; */
     align-items: center;
     text-align: center;
 
@@ -348,24 +488,24 @@ body {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     color: white;
 }
 
 .contact-content {
     width: 100%;
-    display: flex;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 .contact-section {
-    flex: 1;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex: 1;
 }
 
 .contact-img img {
@@ -375,13 +515,16 @@ body {
 
 .contact h2 {
     margin-bottom: 40px;
+
     font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
 }
 
 .contact-form {
+    margin: 0;
     width: 100%;
     max-width: 450px;
-    margin: 0;
+
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -390,11 +533,11 @@ body {
 .contact-form input,
 .contact-form textarea {
     padding: 10px;
-    border-radius: 8px;
-    border: none;
 
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     color: white;
 }
 
@@ -413,20 +556,22 @@ textarea::placeholder {
 
 .contact-form button {
     padding: 10px;
-    border: none;
-    border-radius: 10px;
 
     background: white;
+    border: none;
+    border-radius: 10px;
     color: black;
+
     cursor: pointer;
 
     transition: 0.3s ease;
 }
 
 .contact-form button:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
 
 /* Footer Section CSS */
 
@@ -444,11 +589,7 @@ textarea::placeholder {
 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
-    box-shadow: 10px 0 30px rgba(0,0,0,0.3);
-}
-
-.footer p {
-    text-align: right;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
 }
 
 .socials {
@@ -466,14 +607,15 @@ textarea::placeholder {
 .profiles a::after {
     content: "";
 
-    height: 2px;
     width: 0;
+    height: 2px;
 
     position: absolute;
-    bottom: -3px;
     left: 0;
-    
+    bottom: -3px;
+
     background: white;
+
     transition: 0.3s ease;
 }
 
@@ -488,7 +630,7 @@ textarea::placeholder {
     from {
         opacity: 0;
         transform: translateY(20px);
-    }    
+    }
 
     to {
         opacity: 1;
@@ -508,12 +650,13 @@ textarea::placeholder {
 @media (max-width: 768px) {
 
     /* Hero */
-    .hero-section{
-        width: 90%;
-        flex-direction: column;
+    .hero-section {
         padding: 20px;
-        gap: 30px;
+        width: 90%;
+
+        flex-direction: column;
         text-align: center;
+        gap: 30px;
     }
 
     .hero-section img {
@@ -543,10 +686,30 @@ textarea::placeholder {
         width: 100%;
     }
 
+    /* Skills */
+    .skill-section {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .skills {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .skill-text {
+        padding: 20px;
+    }
+
+    .skill-card {
+        width: 110px;
+    }
+
     /* Projects */
     .projects {
         width: 90%;
     }
+
     .project-container {
         flex-direction: column;
         align-items: center;
@@ -554,6 +717,7 @@ textarea::placeholder {
 
     .project-card {
         width: 90%;
+        box-shadow: none;
     }
 
     /* Contact */
