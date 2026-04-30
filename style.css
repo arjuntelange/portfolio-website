@@ -24,17 +24,6 @@ body {
     display: flex;
     flex-direction: column;
 
-    /* background: linear-gradient(135deg, #1e1e2f, #4c2a59, #9e4b8a); */
-    /* background: linear-gradient(135deg, #470047, #A300A3,  #470047); */
-    /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #1c1c3c); */
-    /* background: linear-gradient(135deg, #3b0a0a, #8b1e3f, #3b0a0a); */
-    /* background: linear-gradient(135deg, #2f0808, #8b1e3f, #2f0808); */
-    /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
-    /* background: linear-gradient(135deg, #1e1e2f, #2b2b45, #3a3a5c); */
-    /* background: linear-gradient(135deg, #141e30, #243b55, #1f2a40); */
-    /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
-
-    /* background: linear-gradient(135deg,#0f172a,#111827,#1e3a8a); */
     background: linear-gradient(135deg, #040118, #0B0344, #040118);
 
     background-repeat: no-repeat;
@@ -126,6 +115,10 @@ body {
 
 /* Main Hero Section CSS */
 
+/* .main-hero {
+    padding: 40px;
+} */
+
 .main-container {
     margin-top: 40px;
 
@@ -138,8 +131,16 @@ body {
     color: #7463F8;
 }
 
-.main-container img {
-    /* margin-bottom: 20px; */
+.main-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.main-logo img {
     width: 200px;
 
     box-shadow: 0 0 80px rgba(139, 92, 246, .25);
@@ -147,7 +148,38 @@ body {
     border-radius: 50%;
 }
 
+
+.main-position {
+    padding: 8px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 0 80px rgba(139, 92, 246, .25);
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    backdrop-filter: blur(50px);
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: fit-content;
+    white-space: nowrap;
+}
+
 .main-intro {
+    margin-top: 30px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,35 +192,13 @@ body {
 .main-intro h1 {
     font-size: 3rem;
     font-weight: 800;
-    letter-spacing: -1;
+    letter-spacing: -1px;
 }
 
 .main-intro p {
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: 1px;
-}
-
-.main-position {
-    padding: 8px 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    box-shadow: 0 0 80px rgba(139, 92, 246, .25);
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(25px);
-    border: 2px solid gray;
-    border-radius: 20px;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-
-    position: relative;
-    top: -40px;
 }
 
 .main-city {
@@ -215,7 +225,7 @@ body {
 }
 
 .main-nav {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,16 +240,79 @@ body {
     text-decoration: none;
 }
 
-.main-menu button {
+.main-menu button  {
     padding: 10px 15px;
 
-    background: #7463F8;
-    border: none;
+    
     border-radius: 15px;
-    color: white;
-    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
+.view-projects button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    background: #7463F8;
+    border: 2px solid #fff;
+
+    color: #fff;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.view-projects button:hover {
+    transform: translateY(-3px);
+}
+
+.resume button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 600;
+    color: #7463F8;
+
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    border: 2px solid #7463F8;
+    backdrop-filter: blur(25px);
+}
+
+.resume button:hover {
+    color: #fff;
+    background-color: #7463F8;
+    border: 2px solid #fff;
+}
+
+.main-profiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-profiles a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: #7463F8;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
 
 /* Hero Section CSS */
 
