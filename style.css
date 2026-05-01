@@ -243,7 +243,6 @@ body {
 .main-menu button  {
     padding: 10px 15px;
 
-    
     border-radius: 15px;
 
     cursor: pointer;
@@ -377,6 +376,133 @@ body {
     color: #C4B5FD;
 }
 
+
+/* Experience Section CSS */
+
+.experience {
+    margin: 120px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.exp-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.exp-section h2 {
+    margin-bottom: 20px;
+
+    color: #7463F8;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+
+    position: relative;
+}
+
+.exp-section h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #7463F8;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.exp-cards {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.exp-cards::before {
+    content: "";
+    position: absolute;
+    left: 38px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #7463F8;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    cursor: pointer;
+
+    border: 1px solid rgba(116, 99, 248, 0.6);
+    background: rgba(116, 99, 248, 0.08);
+    backdrop-filter: blur(10px);
+    transform: translateY(-4px);
+}
+
+.timeline-item:hover .timeline-dot {
+    box-shadow: 0 0 10px #7463F8;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -10px;
+    top: 35px;
+    width: 16px;
+    height: 16px;
+    background: #7463F8;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    margin-left: 30px;
+}
+
+.timeline-content h3 {
+    color: #7463F8;
+    margin-bottom: 5px;
+
+    font-family: "Montserrat", sans-serif;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-content span {
+    font-size: 0.9rem;
+    color: #A8B2FF;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.timeline-content p {
+    margin-top: 10px;
+
+    color: #A8B2FF;
+    line-height: 1.6;
+
+    font-family: "Montserrat", sans-serif;
+}
 
 /* Skills Section CSS */
 
