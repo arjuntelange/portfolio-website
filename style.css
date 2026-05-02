@@ -505,6 +505,167 @@ body {
 }
 
 
+/* Projects Section CSS */
+
+.projects {
+    margin: 120px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.projects h2 {
+    margin-bottom: 20px;
+
+    color: #7463F8;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+
+    position: relative;
+}
+
+.projects h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #7463F8;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.project-container {
+    padding: 20px 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(116, 99, 248, 0.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background: rgba(116, 99, 248, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(116, 99, 248, 0.6);
+    transform: translateY(-4px);
+}
+
+.project-card img {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    transition: 0.3s ease;
+}
+
+.project-card img:hover {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex-grow: 1;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    color: #7463F8;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+
+    flex-grow: 1;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+
+    font-size: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+    color: #A8B2FF;
+    line-height: 1.6;
+
+    flex-grow: 2;
+}
+
+.project-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    flex-grow: 2;
+}
+
+.project-links a {
+    display: inline-block;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary {
+    background: #7463F8;
+    color: white;
+    border: none;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #7463F8;
+    color: #7463F8;
+}
+
+.primary:hover {
+    box-shadow: 0 0 12px rgba(116, 99, 248, 0.6);
+}
+
+.secondary:hover {
+    background: rgba(116, 99, 248, 0.1);
+}
+
 /* Skills Section CSS */
 
 .skill-section {
