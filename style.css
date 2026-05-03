@@ -666,6 +666,160 @@ body {
     background: rgba(116, 99, 248, 0.1);
 }
 
+
+/* Education Section CSS */
+
+.education {
+    margin: 120px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.edu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.edu-section h2 {
+    margin-bottom: 20px;
+
+    color: #7463F8;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+
+    position: relative;
+}
+
+.edu-section h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #7463F8;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.edu-container {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.edu-container::before {
+    content: "";
+    position: absolute;
+    left: 38px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #7463F8;
+}
+
+.edu-item {
+    position: relative;
+    padding: 30px 30px 30px 10px;
+
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.edu-item:hover {
+    cursor: pointer;
+
+    border: 1px solid rgba(116, 99, 248, 0.6);
+    background: rgba(116, 99, 248, 0.08);
+    backdrop-filter: blur(10px);
+    transform: translateY(-4px);
+}
+
+.edu-item:hover .timeline-dot {
+    box-shadow: 0 0 10px #7463F8;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -10px;
+    top: 35px;
+    width: 16px;
+    height: 16px;
+    background: #7463F8;
+    border-radius: 50%;
+}
+
+.edu-card {
+    margin-left: 30px;
+}
+
+.edu-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edu-header h3 {
+    color: #7463F8;
+
+    font-family: "Montserrat", sans-serif;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edu-year {
+    font-size: 0.8rem;
+    color: #A8B2FF;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.edu-college {
+    margin-top: 10px;
+
+    color: #7463F8;
+
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.edu-desc {
+    color: #A8B2FF;
+    line-height: 1.6;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.edu-grade {
+    font-size: 0.8rem;
+    color: #A8B2FF;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.edu-grade strong {
+    padding: 4px 10px;
+    background: rgba(116, 99, 248, 0.15);
+    border-radius: 6px;
+    color: #7463F8;
+}
+
 /* Skills Section CSS */
 
 .skill-section {
