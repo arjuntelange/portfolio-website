@@ -240,7 +240,7 @@ body {
     text-decoration: none;
 }
 
-.main-menu button  {
+.main-menu button {
     padding: 10px 15px;
 
     border-radius: 15px;
@@ -421,7 +421,7 @@ body {
     position: relative;
     padding-left: 40px;
     padding-bottom: 20px;
-    padding-top: 20px; 
+    padding-top: 20px;
 
     display: flex;
     flex-direction: column;
@@ -711,7 +711,7 @@ body {
     position: relative;
     padding-left: 40px;
     padding-bottom: 20px;
-    padding-top: 20px; 
+    padding-top: 20px;
 
     display: flex;
     flex-direction: column;
@@ -867,11 +867,9 @@ body {
 
     color: #DADFFF;
     font-family: "Montserrat", sans-serif;
-    background: linear-gradient(
-        135deg,
-        rgba(116, 99, 248, 0.15),
-        rgba(116, 99, 248, 0.05)
-    );
+    background: linear-gradient(135deg,
+            rgba(116, 99, 248, 0.15),
+            rgba(116, 99, 248, 0.05));
 
     border: 1px solid rgba(116, 99, 248, 0.3);
 
@@ -879,8 +877,8 @@ body {
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(10px);
-    animation: fadeUp 0.5s ease forwards, 
-           float 3s ease-in-out infinite 0.5s;
+    animation: fadeUp 0.5s ease forwards,
+        float 3s ease-in-out infinite 0.5s;
 }
 
 .skill-chip:hover {
@@ -895,11 +893,25 @@ body {
         0 0 20px rgba(116, 99, 248, 0.2);
 }
 
-.skill-chip:nth-child(1) { animation-delay: 0.1s; }
-.skill-chip:nth-child(2) { animation-delay: 0.2s; }
-.skill-chip:nth-child(3) { animation-delay: 0.3s; }
-.skill-chip:nth-child(4) { animation-delay: 0.4s; }
-.skill-chip:nth-child(5) { animation-delay: 0.5s; }
+.skill-chip:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-chip:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-chip:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-chip:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-chip:nth-child(5) {
+    animation-delay: 0.5s;
+}
 
 .skill-chip i {
     margin-right: 6px;
@@ -911,88 +923,89 @@ body {
     transform: scale(1.2) rotate(5deg);
 }
 
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 
 /* Contact Section CSS */
 
 .contact {
-    margin: 60px auto;
-    padding: 40px;
+    margin: 120px auto;
+    padding: 0 20px;
+    max-width: 1200px;
     width: 100%;
-    max-width: 1400px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    color: white;
-
-    transition: 0.3s ease;
-    animation: fadeIn 1s ease
-}
-
-.contact:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    transform: translateY(-5px);
-}
-
-.contact-content {
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.contact-section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex: 1;
-}
-
-.contact-img img {
-    width: 100%;
-    max-width: 450px;
 }
 
 .contact h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
-    font-size: 2rem;
+    color: #7463F8;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+
+    position: relative;
+}
+
+.contact h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #7463F8;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card {
+    padding: 20px;
+    border-radius: 15px;
+
+    background: rgba(116, 99, 248, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    transition: 0.3s ease;
+    animation: fadeUp 0.6s ease forwards;
+    opacity: 0;
+    cursor: pointer;
+
+    will-change: transform;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+
+    background: rgba(116, 99, 248, 0.08);
+    border: 1px solid rgba(116, 99, 248, 0.6);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card i {
+    font-size: 1.2rem;
+    color: #7463F8;
+}
+
+.contact-card p {
+    color: #A8B2FF;
     font-family: "Montserrat", sans-serif;
 }
 
-.contact p {
-    margin-bottom: 40px;
-}
-
 .contact-form {
-    margin: 0;
-    width: 100%;
-    max-width: 450px;
-
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -1000,44 +1013,64 @@ body {
 
 .contact-form input,
 .contact-form textarea {
-    padding: 10px;
-
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    color: white;
-}
-
-input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-textarea::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.contact-form textarea {
-    height: 120px;
-    resize: none;
-}
-
-.contact-form button {
-    padding: 10px;
-
-    background: white;
-    border: none;
+    padding: 12px 15px;
     border-radius: 10px;
-    color: black;
 
-    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(116, 99, 248, 0.03);
 
+    color: #DADFFF;
+    font-family: "Montserrat", sans-serif;
+
+    outline: none;
     transition: 0.3s ease;
 }
 
+.contact-form textarea {
+    resize: none;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.contact-form textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #7463F8;
+    box-shadow: 0 0 10px rgba(116, 99, 248, 0.3);
+}
+
+.contact-form button {
+    padding: 12px;
+    border-radius: 10px;
+
+    background: #7463F8;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    will-change: transform;
+}
+
 .contact-form button:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.contact-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.contact-card:nth-child(3) {
+    animation-delay: 0.6s;
 }
 
 
@@ -1094,21 +1127,27 @@ textarea::placeholder {
 
 /* Animation for Fade In Effect */
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@keyframes float {
+    0% {
+        transform: translateY(0);
     }
 
-    to {
-        opacity: 1;
+    50% {
+        transform: translateY(-4px);
+    }
+
+    100% {
         transform: translateY(0);
     }
 }
 
-@keyframes revealText {
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+    }
+
     to {
-        transform: translateX(0);
+        opacity: 1;
     }
 }
 
