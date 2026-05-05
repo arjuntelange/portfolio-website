@@ -1045,12 +1045,21 @@ body {
 
 .contact-form textarea {
     resize: none;
-    overflow: scroll;
-    scroll-behavior: smooth;
+    overflow-y: auto;
 }
 
+/* Hide scrollbar but keep scroll */
 .contact-form textarea::-webkit-scrollbar {
-    display: none;
+    width: 4px;
+}
+
+.contact-form textarea::-webkit-scrollbar-thumb {
+    background: rgba(116, 99, 248, 0.5);
+    border-radius: 10px;
+}
+
+.contact-form textarea::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .contact-form input:focus,
@@ -1196,3 +1205,4 @@ body {
 
 
 /* Mobile Responsive Web Design */
+
