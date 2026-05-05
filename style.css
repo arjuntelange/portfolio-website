@@ -1091,6 +1091,83 @@ body {
 }
 
 
+/* Footer CSS */
+
+.footer {
+    margin-top: 120px;
+    padding: 40px 20px 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Left */
+.footer-left h3 {
+    color: #7463F8;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    color: #A8B2FF;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+/* Right */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-right a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #A8B2FF;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+
+    transition: 0.3s ease;
+}
+
+/* ICON STYLE */
+.footer-right i {
+    font-size: 1.2rem;
+    color: #7463F8;
+}
+
+/* HOVER EFFECT (clean, not jumpy) */
+.footer-right a:hover {
+    color: #7463F8;
+    transform: translateX(5px);
+}
+
+/* Bottom */
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+}
+
 /* Animation for Fade In Effect */
 
 @keyframes float {
