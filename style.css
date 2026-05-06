@@ -193,7 +193,7 @@ body {
     font-weight: 600;
 
     position: absolute;
-    bottom: -15px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -568,6 +568,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    perspective: 1000px;
 }
 
 .project-card {
@@ -591,14 +593,6 @@ body {
     transition: all 0.3s ease;
 }
 
-.project-card:hover {
-    background: rgba(116, 99, 248, 0.08);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(116, 99, 248, 0.6);
-    transform: translateY(-4px);
-}
-
 .project-card img {
     margin-bottom: 10px;
     width: 100%;
@@ -610,10 +604,6 @@ body {
     border-bottom-left-radius: 0;
 
     transition: 0.3s ease;
-}
-
-.project-card img:hover {
-    transform: scale(1.05);
 }
 
 .project-info {
@@ -1194,6 +1184,62 @@ body {
     color: #777;
     font-size: 0.9rem;
     font-family: "Montserrat", sans-serif;
+}
+
+
+/* Interactive Animation */
+
+.hero-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.hero-show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+.hero-item {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.hero-item.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.card {
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(116, 99, 248, 0.6);
+}
+
+.project-card:hover {
+    background: rgba(116, 99, 248, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    
+    transform: translateY(-4px);
 }
 
 /* Animation for Fade In Effect */

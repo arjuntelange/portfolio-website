@@ -7,6 +7,7 @@
     <title>Arjun's Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="animation.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,11 +120,11 @@
     </section>
 
     <!-- Main Hero Section ⏬ -->
-    <section class="main-hero" id="home">
+    <section class="main-hero hero-hidden" id="home">
         <div class="main-container">
 
             <div class="main-logo">
-                <img src="assets/images/arjun.jpeg" alt="Arjun's Image">
+                <img src="assets/images/my-img.png" alt="Arjun's Image">
 
                 <div class="main-position">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -133,11 +134,11 @@
                         <path
                             d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z" />
                     </svg>
-                    <p>Full Stack Developer</p>
+                    <p class="hero-item">Full Stack Developer</p>
                 </div>
             </div>
 
-            <div class="main-intro">
+            <div class="main-intro hero-item">
                 <h1>Arjun Telange</h1>
                 <p>Building responsive modern websites with clean UI & code.</p>
             </div>
@@ -220,7 +221,7 @@
     </section>
 
     <!-- About Section ⏬ -->
-    <section class="about-me" id="about">
+    <section class="about-me hidden" id="about">
         <div class="about-section">
             <h2>About</h2>
             <div class="about-info">
@@ -248,7 +249,7 @@
     </section>
 
     <!-- Experience Section ⏬ -->
-    <section class="experience" id="experience">
+    <section class="experience hidden" id="experience">
         <div class="exp-section">
             <h2>Experience</h2>
             <div class="exp-cards">
@@ -292,11 +293,11 @@
     </section>
 
     <!-- Projects Section ⏬ -->
-    <section class="projects" id="projects">
+    <section class="projects hidden" id="projects">
         <h2>Projects</h2>
         <div class="project-container">
 
-            <div class="project-card">
+            <div class="project-card card">
                 <img src="assets/images/project1.png" alt="My Project">
 
                 <div class="project-info">
@@ -315,7 +316,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card card">
                 <img src="assets/images/project3.png" alt="My Project">
 
                 <div class="project-info">
@@ -334,7 +335,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card card">
                 <img src="assets/images/project2.png" alt="My Project">
 
                 <div class="project-info">
@@ -356,7 +357,7 @@
     </section>
 
     <!-- Education Section ⏬ -->
-    <section class="education" id="education">
+    <section class="education hidden" id="education">
         <div class="edu-section">
             <h2>Education</h2>
             <div class="edu-container">
@@ -411,7 +412,7 @@
     </section>
 
     <!-- Skills Section ⏬ -->
-    <section class="skills" id="skills">
+    <section class="skills hidden" id="skills">
         <h2>Skills</h2>
 
         <div class="skills-container">
@@ -434,7 +435,7 @@
     </section>
 
     <!-- Contact Section ⏬ -->
-    <section class="contact" id="contact">
+    <section class="contact hidden" id="contact">
         <h2>Contact</h2>
 
         <div class="contact-container">
