@@ -31,3 +31,33 @@ mobileCards.forEach(card => {
     });
 
 });
+
+
+
+// Mobile Scroll Reveal Animation
+
+const revealElements = document.querySelectorAll(
+    ".section, .card, .project-card, .skill-card"
+);
+
+revealElements.forEach(el => {
+    el.classList.add("reveal-mobile");
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach(el => {
+    revealObserver.observe(el);
+});

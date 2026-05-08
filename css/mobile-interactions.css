@@ -2,6 +2,15 @@
 
 @media (max-width: 768px) {
 
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
     /* Navbar */
     .nav-section {
         width: 100%;
@@ -199,5 +208,25 @@
     .footer-container {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .reveal-mobile {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(6px);
+
+        transition:
+            opacity 0.8s ease,
+            transform 0.8s ease,
+            filter 0.8s ease;
+    }
+
+    .reveal-mobile.active {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
     }
 }
