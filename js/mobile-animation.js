@@ -14,3 +14,20 @@ document.querySelectorAll(".menu a").forEach(link => {
         hamburger.classList.remove("active");
     });
 });
+
+// Mobile Card Touch Animation
+
+const mobileCards = document.querySelectorAll(".card");
+
+mobileCards.forEach(card => {
+
+    card.addEventListener("touchstart", () => {
+        card.style.transform = "scale(0.97)";
+        card.style.transition = "transform 0.2s ease";
+    });
+
+    card.addEventListener("touchend", () => {
+        card.style.transform = "scale(1)";
+    });
+
+});
